@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'app'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://shukhratbekov.uz', 'https://194.87.235.27', 'https://www.shukhratbekov.uz']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -137,7 +139,6 @@ URL = os.getenv('URL')
 HOST = os.getenv('HOST')
 TOKEN = os.getenv('TOKEN')
 REMOVER = os.getenv('REMOVER')
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp-mail.outlook.com'
